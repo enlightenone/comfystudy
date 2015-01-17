@@ -1,0 +1,15 @@
+<h1> Good Study Spot</h1>
+
+<%= form_tag('/searches', method:"get") do %>
+    <%= text_field_tag :keywords %>
+    <%= hidden_field_tag :flag, value: "yes" %>
+    <%= submit_tag "Search" %>
+  
+<% end %>
+
+<% if @businesses %>
+  <% @businesses.each do |business|%>
+    Business Name: <%= business.name %><br>
+  <% end %>
+<% end %>
+
