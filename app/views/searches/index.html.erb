@@ -4,8 +4,8 @@
 <h1> Good Study Spot</h1>
 
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+<div style='width: 1300px;'>
+  <div id="map" style='width: 1300px; height: 400px;'></div>
 </div>
 
 <script style="text/javascript">
@@ -20,7 +20,7 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 });
 </script>
 
-<div style="height: 20px; width: 00px"></div>
+<div style="height: 20px;"></div>
 
 <%= form_tag('/searches', method:"get") do %>
     <%= text_field_tag :keywords %>
@@ -35,5 +35,3 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   <% end %>
 <% end %>
 
-
-<%=  @hash %>
