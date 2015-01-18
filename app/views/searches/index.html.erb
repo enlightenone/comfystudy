@@ -11,29 +11,16 @@
 <script style="text/javascript">
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers([
+  markers = handler.addMarkers( 
+    <%= raw @hash.to_json %>
 
-    // { lat:  -118.0524869999999, lng: 34.064439},
-    { lat:  34.064439, lng: -118.05248699999999}
-    // { lat: 47, lng: 3.5},
-    // { lat: 49, lng: 4},
-    // { lat: 51, lng: 3.5}     
-    // {
-    //   "lat": -118.0524869  9999999,
-    //   "lng": 34.064439,
-    //   "picture": {
-    //     "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-    //     "width":  36,
-    //     "height": 36
-    //   },
-      // "infowindow": "hello!"
-    // }
-  ]);
+    );
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
 </script>
-<div style="height: 20px; width: 1200px"></div>
+
+<div style="height: 20px; width: 00px"></div>
 
 <%= form_tag('/searches', method:"get") do %>
     <%= text_field_tag :keywords %>
@@ -48,3 +35,5 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   <% end %>
 <% end %>
 
+
+<%=  @hash %>

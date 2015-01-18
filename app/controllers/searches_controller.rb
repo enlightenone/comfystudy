@@ -7,30 +7,44 @@ class SearchesController < ApplicationController
 
       if @keywords.strip != ''
 
+        @keywords + " study spot" 
+
       @location = "Los Angeles" unless @location.strip != ''
         @params = { 
            term: @keywords,
-           limit: 10
+           limit: 1
          }
          @yelp_results = Yelp.client.search(@location, @params)
 
          @businesses = @yelp_results.businesses
 
+
       else 
         render  '/searches/index.html'
       end 
-     end
+    
 
-      # @users = User.all
-       @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-          marker.lat user.latitude
-          marker.lng user.longitude
-          marker.infowindow user.description
-          marker.picture({
-            "url" => "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-            "width" => 32, 
-            "height" => 32
-            })
-          marker.json({title: user.title })
-      end
+       # @user =[{ lat: 40, lng: -80, name: 'Foo', infowindow: "I'm Foo" },
+       # { lat: 45, lng: -90, name: 'Bar', infowindow: "I'm Bar" },
+       # { lat: 50, lng: -85, name: 'Baz', infowindow: "I'm Baz" }
+
+        @users = {"latitude"=> 40, "longitude"=> -80, "name"=> "Foo"}
+
+      # @users = [{"latitude"=> 40, "longitude"=> -80, "name"=> "Foo"},
+      # {"latitude"=> 45, "longitude"=> -90, "name"=> "Barß"},
+      # {"latitude"=> 50, "longitude"=> -84, "name"=>  "Baz"}
+      #  ]
+    
+
+      # # @users = User.all
+      #  @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+      #     marker.lat  40
+      #     marker.lng  -80
+      #     marker.infowindow  "foo"
+      # end
+
+       @hash = [{:lat=>40, :lng=>-80, :infowindow=>"foo"}, 
+                {:lat=>45, :lng=>-90, :infowindow=>"bar"}, 
+                {:lat=>50, :lng=>-85, :infowindow=>"baz"}]
+    end
 end
