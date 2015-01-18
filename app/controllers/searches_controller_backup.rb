@@ -7,6 +7,8 @@ class SearchesController < ApplicationController
 
       if @keywords.strip != ''
 
+        @keywords + " study spot" 
+
       @location = "Los Angeles" unless @location.strip != ''
         @params = { 
            term: @keywords,

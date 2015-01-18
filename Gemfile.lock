@@ -66,8 +66,10 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
+    geocoder (1.2.6)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.2.6)
@@ -179,6 +181,8 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.1)
   byebug
   coffee-rails (~> 4.1.0)
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   mongoid

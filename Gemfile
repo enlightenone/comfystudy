@@ -31,6 +31,12 @@ gem 'autoprefixer-rails'
 # Yelp API gem
 gem 'yelp', require: 'yelp'
 
+# Google Map Gem
+gem 'gmaps4rails'
+
+# Geocoder
+gem "geocoder"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
