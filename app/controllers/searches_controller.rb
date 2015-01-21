@@ -4,6 +4,11 @@ class SearchesController < ApplicationController
 
       @keywords = params[:keywords].to_s
       @location = params[:location].to_s
+      @limit = params[:limit] 
+
+      # if params[:limit] == nil
+      #   @limit = 
+      # end
  
 
       if @keywords.strip != ''
@@ -13,7 +18,7 @@ class SearchesController < ApplicationController
       @location = "Los Angeles" unless @location.strip != ''
         @params = { 
            term: @keywords,
-           limit: 3
+           limit: 10
          }
          @yelp_results = Yelp.client.search(@location, @params)
 
