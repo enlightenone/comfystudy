@@ -1,14 +1,27 @@
 class SearchesController < ApplicationController
 
     def index
-
+    
+      # search field params values
       @keywords = params[:keywords].to_s
       @location = params[:location].to_s
-      @limit = params[:limit] 
+
 
       if params[:wifi].to_s == "yes"
         @keywords += " free wifi"
-      end 
+      end
+
+      # if (params[:libraries] == nil && params[:college] == nil && params[:college] == nil) ||
+      #    (params[:libraries] == "yes" && params[:college] == "yes" && params[:college] == "yes")
+
+      #    @category_string ='libraries,cafes,collegeuniv'
+      # else
+      #    @category_array = []
+
+      #    @category_string = @category_array.
+
+      # end 
+
 
       if @keywords.strip != ''
 
@@ -18,7 +31,7 @@ class SearchesController < ApplicationController
         @params = { 
            term: @keywords,
            limit: 20,
-           category_filter: 'libraries,cafes,collegeuniv'
+           category_filter: @category_string
          }
          @yelp_results = Yelp.client.search(@location, @params)
 
