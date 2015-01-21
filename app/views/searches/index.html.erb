@@ -6,9 +6,15 @@
 <h2>whole URL: {{absolute_url}}</h2>
 <h2>path: {{url_path}}</h2>
  <%=@limit %>
- limit: <input type="checkbox" ng-model="limitclick" ng-click="test(limitclick)" ng-checked="limitclick"><br/>
- {{limitclick}}<br>
- passing variable: {{result2 }}
+ wifi: <input type="checkbox" ng-model="wificlick" ng-click="optionsFilter(wificlick, 'wifi')" ng-checked="wificlick"><br/><br/>
+ <h4>Catgories</h4>
+ Libraries: <input type="checkbox" ng-model="librariesclick" ng-click="optionsFilter(librariesclick, 'libraries')" ng-checked="librariesclick"><br/><br/>
+ Cafes: <input type="checkbox" ng-model="cafesclick" ng-click="optionsFilter(cafesclick, 'cafes')" ng-checked="cafesclick"><br/><br/>
+ College: <input type="checkbox" ng-model="collegeclick" ng-click="optionsFilter(collegeclick, 'college')" ng-checked="collegeclick"><br/><br/>
+ 
+
+ passing variable: {{result2 }}<br>
+ keywords string: <%=  @keywords %>
 
 </div>
 
