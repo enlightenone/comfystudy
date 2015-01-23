@@ -93,18 +93,9 @@ app.controller("searchController",function($scope, $location){
      }
  };
  
-$scope.businessDisplay = function(id){
-        $scope.absolute_url = $location.absUrl() ; 
-        // if ($scope.url_path.match(/&business_id/g)){
-        //        location.href.replace(/&business_id/g, "")
-        //     }
-        location.assign($scope.absolute_url + "&business_id=" + id + "&&")
-
-    // $scope.bus_id = '&' + business_id;ß
-    // $scope.absolute_url = $location.absUrl() ; 
-    // location.assign($scope.absolute_url + "&sort=1" );
-
-
-};
+$scope.businessDisplay = function(number){
+          $scope.business_flags = new Array(20) ;
+         $scope.business_flags[number] = true ; 
+     };
 
 });
