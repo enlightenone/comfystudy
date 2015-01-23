@@ -2,11 +2,6 @@ var app = angular.module("myApp",[]);
 
 app.controller("searchController",function($scope, $location){
 
-  //default options flags variables
-  // $scope.wificlick = false ; 
-  // $scope.librariesclick = false ;
-  // $scope.cafesclick = false;
-  // $scope.collegeclick = false
 
   // Function to preserve check mark when reloading.
   $scope.reloadCheck = function(){
