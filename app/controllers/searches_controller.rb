@@ -39,10 +39,22 @@ class SearchesController < ApplicationController
            category_filter: @category_string,
            sort: @sortkey
          }
+
          @yelp_results = Yelp.client.search(@location, @params)
 
          @businesses = @yelp_results.businesses
 
+         
+
+         #display individual business info
+
+         if params[:business_id] == nil
+            @chosen_business = @businesses[0]
+         else 
+            @businesses.each do |b|
+             @chosen_business = b if params[:business_id] == b.id 
+            end            
+         end 
 
         # Google Map Function
 

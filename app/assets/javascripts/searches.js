@@ -1,6 +1,6 @@
 var app = angular.module("myApp",[]);
 
-app.controller("testController",function($scope, $location){
+app.controller("searchController",function($scope, $location){
 
   //default options flags variables
   // $scope.wificlick = false ; 
@@ -114,6 +114,17 @@ app.controller("testController",function($scope, $location){
      }
  };
  
+$scope.businessDisplay = function(id){
 
+          $scope.absolute_url = $location.absUrl() ; 
+        
+        location.assign($scope.absolute_url + "&business_id=" + id)
+
+    // $scope.bus_id = '&' + business_id;
+    // $scope.absolute_url = $location.absUrl() ; 
+    // location.assign($scope.absolute_url + "&sort=1" );
+
+
+};
 
 });
