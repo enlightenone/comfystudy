@@ -1,5 +1,7 @@
 class SearchesController < ApplicationController
 
+  before_action :authorize
+
     def index
     
       # search field params values

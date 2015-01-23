@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<% if current_user %>
+
+<strong>Logged in as <%= current_user.first_name + " " + current_user.last_name if current_user %></strong> | <%= link_to "Log Out", logout_path %>
+<% else %>
+
+<%=link_to "Log In", login_path %> | <%= link_to "Sign Up", signup_path %>
+
+<% end %>
+
 <%= yield %>
 
 </body>

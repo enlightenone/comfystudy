@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find(params[:user][:email])
+    user = User.find_by(email: params[:user][:email])
 
     if user && user.authenticate(params[:user][:password])
-      session[:user_id] = user.user.id
-      redirect_to  searches_path
+      session[:user_id] = user.id
+      redirect_to searches_path
     else
       render :new
     end
