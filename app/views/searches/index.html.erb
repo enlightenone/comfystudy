@@ -56,11 +56,20 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   <% @businesses.each do |business|%>
     Business Name: <%= business.name %><br>
     City: <%=  business.location.city%><br>
-    <span style="color: blue; font-size: 24px;" ng-click="businessDisplay('<%= business.id %>')">Link</span>
+    <span style="color: blue; font-size: 24px;" ng-click="businessDisplay('<%=  @businesses.index(business) %>')">Link</span>
   <% end %>
 <% end %>
 
+
+
+</div>
 <div style="border: 3px solid black;">
-   <%= @chosen_business.id if @chosen_business %>
+<% if @businesses %>
+  <% @businesses.each do |business|%>
+    Business Name: <%= business.name %><br>
+    City: <%=  business.location.city%><br>
+    <span style="color: blue; font-size: 24px;" ng-click="businessDisplay('<%= business.id %>')">Link</span>
+  <% end %>
+<% end %>
  
 </div>

@@ -19,21 +19,6 @@ app.controller("searchController",function($scope, $location){
 
     //Category Sort Flag
 
-    // if (!$scope.url_path.match(/sort=0/g) && !$scope.url_path.match(/sort=1/g) ){
-    //     $scope.bestmatch_flag = false ;
-    //     $scope.highestrate_flag = true ;
-
-    // }
-
-    // if ($scope.bestmatch_flag == null && $scope.highestrate_flag == null){
-    //     $scope.bestmatch_flag = true ;
-    //     $scope.highestrate_flag = false ;
-    // } 
-    // else {
-    //   $scope.bestmatch_flag = $scope.url_path.match(/sort=0/g) ? true : false ;
-    //   $scope.bestmatch_flag = $scope.url_path.match(/sort=1/g) ? false: true ;
-    // }
-
       if ($scope.url_path.match(/sort=0/g)){
          $scope.bestmatch_flag = true ;
          $scope.highestrate_flag = false ;
@@ -44,12 +29,6 @@ app.controller("searchController",function($scope, $location){
          $scope.bestmatch_flag = true ;
          $scope.highestrate_flag = false ;
       }
-
-
-      // $scope.bestmatch_flag = $scope.url_path.match(/sort=0/g) ? true : false ;
-      // $scope.highestrate_flag = $scope.url_path.match(/sort=0/g) ? false : true;
-      // $scope.highestrate_flag = $scope.url_path.match(/sort=1/g) ? true: false;
-      // $scope.bestmatch_flag = $scope.url_path.match(/sort=1/g) ? false: true ;
 
   };
 
@@ -115,12 +94,13 @@ app.controller("searchController",function($scope, $location){
  };
  
 $scope.businessDisplay = function(id){
+        $scope.absolute_url = $location.absUrl() ; 
+        // if ($scope.url_path.match(/&business_id/g)){
+        //        location.href.replace(/&business_id/g, "")
+        //     }
+        location.assign($scope.absolute_url + "&business_id=" + id + "&&")
 
-          $scope.absolute_url = $location.absUrl() ; 
-        
-        location.assign($scope.absolute_url + "&business_id=" + id)
-
-    // $scope.bus_id = '&' + business_id;
+    // $scope.bus_id = '&' + business_id;ß
     // $scope.absolute_url = $location.absUrl() ; 
     // location.assign($scope.absolute_url + "&sort=1" );
 
