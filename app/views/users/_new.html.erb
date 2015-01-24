@@ -1,10 +1,4 @@
-     <script type="text/javascript">
-            $(window).load(function(){
-                $('#myModal').modal('show');
-            });
-        </script>
-
-<!-- Modal -->
+<!-- New User Sign Up Bootstrap Modal-->
 <div class="modal fade" data-show="true" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -13,7 +7,16 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        ...
+          <h1>Signup!</h1>
+          <%= form_for :user, url: '/users' do |f|%>
+          User Name: <%= f.text_field :username %><br>
+          Email: <%= f.text_field :email %><br>
+          First Name: <%= f.text_field :first_name %><br>
+          Last Name: <%= f.text_field :last_name %><br>
+          Password: <%= f.password_field :password %><br>
+          Password Confirmation: <%= f.password_field :password_confirmation %><br>
+          <%= f.submit "Submit" %>
+          <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
