@@ -1,0 +1,16 @@
+<%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" %>
+<%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
+
+<div class="map" id="map"></div>
+
+<script style="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers( 
+    <%= raw @hash.to_json %>
+
+    );
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+</script>

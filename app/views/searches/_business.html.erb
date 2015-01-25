@@ -1,3 +1,32 @@
-    Business Name: <%= business.name %><br>
-    City: <%=  business.location.city%><br>
-    <span style="color: blue; font-size: 24px;" ng-click="businessDisplay(<%=  @businesses.index(business) %>)">Link</span>
+
+<% if @businesses %>
+  <% @businesses.each_with_index do |business, index|%>
+   <li>
+    <div class="list_outerbox">
+      <div class="list_index">
+       <%= index + 1 %>.
+      </div>  
+      <div class="list_content">
+        <div class="inner_col">
+          <div class="business_name">
+              <%= business.name %>
+          </div>
+          <div class="business_meta">
+            <div class="rate"> <%= business.rating %> </div>
+              <div class="business_data">
+                <div class="address"><%= business.location.address[0] %></div>
+                <div class="category"><%= business.categories[0][0] %></div>
+            </div>                     
+          </div> 
+          <div class="result_footer"></div>
+        </div>
+        <div class="business_photo">
+          <img src="<%= business.image_url%>" alt="<%= business.name %>" >
+        </div>
+      </div>     
+    </div>
+   </li>
+  <% end %>
+<% end %>
+
+

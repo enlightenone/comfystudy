@@ -8,62 +8,25 @@
   <%= csrf_meta_tags  %>
 </head>
 <body>
-<header class="header">
-<div class="row">
-<div class="container"> 
-<div class="pull-left">
-
-<%= form_tag('/searches', method:"get", :html => {:class => "form-inline", :role =>"form"}) do %>
-    <div class="form-group">
-      <% labe_tag :keywords,nil, :html=> {:class =>"sr-only"}%>
-    <%= text_field_tag :keywords, nil, :html => { :type => "keywords",:class => "form-control", :id =>"keywords", :placeholder="Enter Keywords"} %>
+  <header class="header">
+    <div class="row">
+      <div class="container"> 
+        <div class="pull-left">
+          <%= render partial: "/searches/searchform" %>
+        </div>
+        <div class="pull-right"> 
+          <%= render partial: "/searches/login_logout_signup" %>
+         </div>
+      </div>
     </div>
+  </header>
+  <section>
+    <%= yield %>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        &copy; ComfyStudy 
     </div>
-    <div class="form-group">
-        <% labe_tag :location,nil, :html=> {:class =>"location"}%>
-    <%= text_field_tag :location, nil, :html => { :type => "location",:class => "form-control", :id =>"location", :placeholder="Enter The Address"} %>
-    </div>
-    <%= submit_tag "Search", nil :html {:class => "btn btn-default" %>
- 
-<% end %>
-
-  <form class="form-inline" role="form">
-    <div class="form-group">
-      <label class="sr-only" for="keyword">Keywords:</label>
-      <input type="keyword" class="form-control" id="keyword" placeholder="Enter Keywords">
-    </div>
-    <div class="form-group">
-      <label class="sr-only" for="address">Address:</label>
-      <input type="address" class="form-control" id="address" placeholder="Enter Address">
-    </div>
-    <span class="glyphicon glyphicon-search white"></span>
-  </form>
-</div>
-<div class="pull-right">
-  <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle bg-color" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-      Dropdown
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-    </ul>
-  </div>
- </div>
-</div>
-</div>
-</header>
-<section>
-<%= yield %>
-</section>
-<footer class="footer">
-  <div class="container">
-      &copy; ComfyStudy
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>

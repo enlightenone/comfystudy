@@ -1,0 +1,11 @@
+<div style="border: 1px solid black;">
+  <% if @businesses %>
+    <% @businesses.each do |business|%>
+      <div ng-show="business_flags[<%=  @businesses.index(business) %>]">
+        Index: <%= business.name %>
+        Business Name: <%= business.name %><br>
+        City: <%=  business.location.city%><br>
+      </div>
+    <% end %>
+ <% end %>
+</div>

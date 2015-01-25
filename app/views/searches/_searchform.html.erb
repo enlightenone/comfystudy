@@ -1,6 +1,15 @@
-<%= form_tag('/searches', method:"get") do %>
-    <%= text_field_tag :keywords %>
-    <%= text_field_tag :location %>
-    <%= submit_tag "Search" %>
- 
+<%= form_tag('/searches',  method: "get", class: "form-inline") do %>
+
+<div class="form-group">
+    <%= text_field_tag :keywords, nil, {:class => 'form-control', :placeholder =>'Enter keywords' } %>
+</div>
+
+<div class="form-group">
+    <%= text_field_tag :location, nil, {:class => 'form-control', :placeholder =>'Enter Locations' } %>
+</div>
+
+<%= button_tag(type: "submit", class: "btn btn-info info-rewrite") do %>
+    <span class="glyphicon glyphicon-search white"></span>
+<% end %>
+
 <% end %>
