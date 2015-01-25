@@ -2,11 +2,14 @@ var app = angular.module("myApp",[]);
 
 app.controller("searchController",function($scope, $location){
 
+  // Filter Option Bottom word switch function
+  $scope.filterSwitch = function(){
+     $scope.filter_flag = !$scope.filter_flag 
+  };
 
   // Function to preserve check mark when reloading.
   $scope.reloadCheck = function(){
     $scope.url_path = location.search ;
-
     $scope.wificlick = $scope.url_path.match(/wifi=yes/g) ? true : false; 
     $scope.librariesclick = $scope.url_path.match(/libraries=yes/g) ? true : false; 
     $scope.cafesclick = $scope.url_path.match(/cafes=yes/g) ? true : false; 

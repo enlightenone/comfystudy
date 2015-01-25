@@ -1,0 +1,24 @@
+<div class="filter">
+
+  <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#filterOptions" aria-expanded="false" aria-controls="filterOptions" ng-click="filterSwitch()" >
+    <span ng-hide="filter_flag">Show Filters</span>
+    <span ng-show="filter_flag">Hide Filters</span>
+  </button>
+
+  <div class="collapse" id="filterOptions">
+     wifi: <input type="checkbox" ng-model="wificlick" ng-click="optionsFilter(wificlick, 'wifi')" ng-checked="wificlick"><br/><br/>
+     <h4>Catgories</h4>
+     Libraries: <input type="checkbox" ng-model="librariesclick" ng-click="optionsFilter(librariesclick, 'libraries')" ng-checked="librariesclick"><br/><br/>
+     Cafes: <input type="checkbox" ng-model="cafesclick" ng-click="optionsFilter(cafesclick, 'cafes')" ng-checked="cafesclick"><br/><br/>
+     College: <input type="checkbox" ng-model="collegeclick" ng-click="optionsFilter(collegeclick, 'college')" ng-checked="collegeclick"><br/><br/>
+   
+     <div>
+      Sort by <br>
+      <span ng-show="bestmatch_flag" >Best Match</span><br>
+      <span ng-hide="bestmatch_flag" ng-click="sortFunction('bestmatch')" style="color: blue;">Best Match</span><br>
+      <span ng-show="highestrate_flag">Highest Rated</span><br>
+      <span ng-hide="highestrate_flag" ng-click="sortFunction('highestrate')" style="color: blue;">Highest Rated </span><br>
+     </div>
+  </div>
+
+</div>

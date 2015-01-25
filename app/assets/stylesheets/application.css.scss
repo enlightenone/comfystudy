@@ -1,2 +1,80 @@
   @import "bootstrap-sprockets";
   @import "bootstrap";
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #31B0D5;
+  line-height: 60px;
+  color: white;
+}
+
+.header{  
+  background-color: #31B0D5;
+  width: 100%;
+  display: block;
+  height: 70px;
+  padding-top: 10px;
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+
+
+}
+.white {
+  color: white;
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+.bg-color {
+  background-color: #31B0D5;
+
+}
+
+.field_width{
+
+  width: 250px;
+}
+
+.resultdisplay { 
+  float: right;
+  overflow-x: scroll;
+  height: 600px; 
+  width: 100%; 
+  border: 2px solid red; 
+  padding-left: 30px;
+
+}
+
+div.resultdisplay::-webkit-scrollbar { 
+    display: none; 
+}
+
+div.resultdisplay::-moz-scrollbars-vertical { 
+    display: none; 
+}
+
+.filter {
+  top: 520px;
+  width: 100%;
+  margin-top: 20px;
+
+}
+

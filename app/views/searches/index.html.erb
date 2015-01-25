@@ -1,36 +1,9 @@
 <%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" %>
 <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
-<div>
-<h1>Good Study Spot</h1>
-<h2>whole URL: {{absolute_url}}</h2>
-<h2>path: {{url_path}}</h2>
- <%=@limit %>
- wifi: <input type="checkbox" ng-model="wificlick" ng-click="optionsFilter(wificlick, 'wifi')" ng-checked="wificlick"><br/><br/>
- <h4>Catgories</h4>
- Libraries: <input type="checkbox" ng-model="librariesclick" ng-click="optionsFilter(librariesclick, 'libraries')" ng-checked="librariesclick"><br/><br/>
- Cafes: <input type="checkbox" ng-model="cafesclick" ng-click="optionsFilter(cafesclick, 'cafes')" ng-checked="cafesclick"><br/><br/>
- College: <input type="checkbox" ng-model="collegeclick" ng-click="optionsFilter(collegeclick, 'college')" ng-checked="collegeclick"><br/><br/>
- 
- <div>
-  Sort by <br>
-  <span ng-show="bestmatch_flag" >Best Match</span><br>
-  <span ng-hide="bestmatch_flag" ng-click="sortFunction('bestmatch')" style="color: blue;">Best Match</span><br>
-  <span ng-show="highestrate_flag">Highest Rated</span><br>
-  <span ng-hide="highestrate_flag" ng-click="sortFunction('highestrate')" style="color: blue;">Highest Rated </span><br>
- </div>
 
- passing variable: {{result2 }}<
- ]br>
- keywords string: <%=  @keywords %><br>
- bestmatch flag: {{bestmatch_flag}}<br>
- highest rate flag: {{highestrate_flag}}<br>
- Category: <%= @category_string %><br>
+<div class="map" id="map"></div>
 
-</div>
 
-<div style='width: 500px;'>
-  <div id="map" style='width: 500px; height: 250px;'></div>
-</div>
 
 <script style="text/javascript">
 handler = Gmaps.build('Google');
@@ -44,6 +17,8 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 });
 </script>
 <div style="height: 20px;"></div>
+
+<%= render partial: "filter" %>
 
 <%= render partial: "searchform" %>
 <%= render partial: "business", collection: @businesses %>
