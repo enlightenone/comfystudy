@@ -12,9 +12,24 @@
 <div class="row">
 <div class="container"> 
 <div class="pull-left">
+
+<%= form_tag('/searches', method:"get", :html => {:class => "form-inline", :role =>"form"}) do %>
+    <div class="form-group">
+      <% labe_tag :keywords,nil, :html=> {:class =>"sr-only"}%>
+    <%= text_field_tag :keywords, nil, :html => { :type => "keywords",:class => "form-control", :id =>"keywords", :placeholder="Enter Keywords"} %>
+    </div>
+    </div>
+    <div class="form-group">
+        <% labe_tag :location,nil, :html=> {:class =>"location"}%>
+    <%= text_field_tag :location, nil, :html => { :type => "location",:class => "form-control", :id =>"location", :placeholder="Enter The Address"} %>
+    </div>
+    <%= submit_tag "Search", nil :html {:class => "btn btn-default" %>
+ 
+<% end %>
+
   <form class="form-inline" role="form">
     <div class="form-group">
-      <label class="sr-only" for="email">Keywords:</label>
+      <label class="sr-only" for="keyword">Keywords:</label>
       <input type="keyword" class="form-control" id="keyword" placeholder="Enter Keywords">
     </div>
     <div class="form-group">
