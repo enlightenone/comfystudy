@@ -273,10 +273,21 @@ div.resultdisplay::-moz-scrollbars-vertical {
 
 /* Display Individual Page End */
 
-.filter {
-  top: 520px;
+.filter_row_buffer {
   width: 100%;
-  margin-top: 20px; 
+  margin: 30px; 
+}
+
+.filter_title {
+ display: block;
+ color: #31B0D5;
+ font-size: 20px;
+ margin-bottom: 10px
+
+}
+
+.sort_pointer:hover{
+  cursor: pointer;
 }
 
 

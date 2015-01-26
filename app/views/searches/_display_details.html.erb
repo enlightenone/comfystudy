@@ -11,16 +11,15 @@
           <div class="first_col">
             <div style="height:330px; width:300px; border: 1px solid #AEB4B6; padding: 10px;">
               <div>
-              <img  src="https://maps.googleapis.com/maps/api/staticmap?center=
+            <img  src="https://maps.googleapis.com/maps/api/staticmap?center=
               <%=business.location.coordinate.latitude%>,<%=business.location.coordinate.longitude %>&zoom=12&size=280x200&markers=color:red&markers=color:red%7Clabel:S%7C<%=business.location.coordinate.latitude%>,<%=business.location.coordinate.longitude %>">
               </div>
             <div class="venture_info">
               <%=  business.location.display_address[0] %><br>
               <%=  business.location.display_address[1] %><br>
               <%=  business.location.display_address[2] %><br>
-              <span class="glyphicon glyphicon-earphone"></span> <%= business.display_phone %><br>
             </div>
-            <a href="https://www.google.com/maps/place/<%=  business.location.display_address[0] %>+<%=  business.location.display_address[1] %>+<%=  business.location.display_address[2] %>/@<%=business.location.coordinate.latitude%>,<%=business.location.coordinate.longitude %>">Get Directions</a>
+            <a href="https://www.google.com/maps/place/<%=  business.location.display_address[0] %>+<%=  business.location.display_address[1] %>+<%=  business.location.display_address[2] %>/@<%=business.location.coordinate.latitude%>,<%=business.location.coordinate.longitude %>" target="_blank">Get Directions</a>
             </div>
           </div>
 
