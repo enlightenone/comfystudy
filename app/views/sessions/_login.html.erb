@@ -1,0 +1,21 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+  Log In
+</button>
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Log In</h4>
+      </div>
+      <div class="modal-body">
+<%= form_for :user, url: '/login' do |f|%>
+  Email: <%= f.text_field :email %><br><br>
+  Passowrd: <%= f.password_field :password %><br><br>
+  <%= f.submit "Login" %>
+<% end %>
+      </div>
+    </div>
+  </div>
+</div>

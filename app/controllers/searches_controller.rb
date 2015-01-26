@@ -52,7 +52,8 @@ class SearchesController < ApplicationController
 
         @businesses. each do |business|
 
-          @map_marker= Hash[:lat=> business.location.coordinate.latitude, :lng=> business.location.coordinate.longitude, :infowindow=> business.name ]
+          @map_marker= Hash[:lat=> business.location.coordinate.latitude, :lng=> business.location.coordinate.longitude, 
+            :infowindow=> business.name]
           @hash.push(@map_marker)
         end
 

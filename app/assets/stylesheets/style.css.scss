@@ -193,8 +193,6 @@ div.resultdisplay::-moz-scrollbars-vertical {
 
 .venture_display {
   width: 700px;
-  border: 2px solid black ;
-
 }
 
 .venture_display .venture_row {
@@ -205,14 +203,13 @@ div.resultdisplay::-moz-scrollbars-vertical {
 .first_col{
   width: 350px;
   float: left;
-  border: 1px solid red;
+
 
 }
  .second_col {
   width: 350px;
   height: 330px;
   float: left ;
-  border: 1px solid blue;
   text-align: center;
   margin: auto 0;
   line-height: 330px;
@@ -300,7 +297,26 @@ div.resultdisplay::-moz-scrollbars-vertical {
 .info-rewrite:hover, .info-rewrite:focus, 
 .info-rewrite.focus, .info-rewrite:active, 
 .info-rewrite.active {
-    background-color:#31B0D5;
+  background-color:#31B0D5;
   border-color:#31B0D5;
+
+}
+
+
+// log in page
+
+.login_background {
+  background-image: image-url("cat.jpg") ;
+  background-size: cover;
+  height: 700px;
+  text-align: center;
+}
+
+.front_page_message {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 600px;
+  text-shadow:2px 2px black;
 
 }
