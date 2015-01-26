@@ -189,6 +189,35 @@ div.resultdisplay::-moz-scrollbars-vertical {
 /* Search Result Display Ends*/
 
 /* Display Individual Page */
+
+.venture_display {
+  width: 700px;
+  border: 2px solid black ;
+
+}
+
+.venture_display .venture_row {
+  margin-bottom: 20px;
+    width: 700px;
+}
+
+.first_col{
+  width: 350px;
+  float: left;
+  border: 1px solid red;
+
+}
+ .second_col {
+  width: 350px;
+  height: 330px;
+  float: left ;
+  border: 1px solid blue;
+  text-align: center;
+  margin: auto 0;
+  line-height: 330px;
+
+}
+
 .venture_name {
   font-size: 30px;
   font-weight: bold;
@@ -201,10 +230,10 @@ div.resultdisplay::-moz-scrollbars-vertical {
 }
 
 .venture_image {
-  float: right;
-  width: 250px;
-  height:250px;
+  width: 300px;
+  height:300px;
   border-radius: 3%;
+
 }
 
 .venture_info {
@@ -213,6 +242,33 @@ div.resultdisplay::-moz-scrollbars-vertical {
   padding-top: 10px;
 
 }
+
+.venture_comment_block {
+  width: 700px;
+  float: left;
+  margin: 20px 10px;
+}
+
+.venture_comment_block .img_block{
+  width: 90px;
+  height: 90px;
+  float: left; 
+
+}
+.venture_comment_block img {
+  width: 80px ;
+  border-radius: 5%;
+
+}
+
+.venture_comment_block span {
+  width: 500px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
 
 /* Display Individual Page End */
 
