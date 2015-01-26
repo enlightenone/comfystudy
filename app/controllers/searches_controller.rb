@@ -37,7 +37,7 @@ class SearchesController < ApplicationController
       @location = "Los Angeles" unless @location.strip != ''
         @params = { 
            term: @keywords,
-           limit: 10,
+           limit: 20,
            category_filter: @category_string,
            sort: @sortkey
          }

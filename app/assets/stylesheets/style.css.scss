@@ -59,8 +59,9 @@ body {
 .resultdisplay { 
   float: right;
   overflow-x: scroll;
-  height: 900px; 
+  height: 600px; 
   width: 700px; 
+  margin-bottom: 100px;
 }
 
 div.resultdisplay::-webkit-scrollbar { 
@@ -262,7 +263,7 @@ div.resultdisplay::-moz-scrollbars-vertical {
 }
 
 .venture_comment_block span {
-  width: 500px;
+  width: 500px ;
   display: block;
   float: left;
   margin-left: 20px;
@@ -275,8 +276,7 @@ div.resultdisplay::-moz-scrollbars-vertical {
 .filter {
   top: 520px;
   width: 100%;
-  margin-top: 20px;
-
+  margin-top: 20px; 
 }
 
 
