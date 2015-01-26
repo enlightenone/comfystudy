@@ -8,8 +8,8 @@
       </div>  
       <div class="list_content">
         <div class="inner_col">
-          <div class="business_name">
-              <%= business.name %>
+          <div class="business_name" ng-click="businessDisplay(<%=  @businesses.index(business) %>)">
+                <a><%= business.name %> </a>
           </div>
           <div class="business_meta">
             <div class="rate"> <%= business.rating %> </div>
@@ -21,7 +21,7 @@
           <div class="result_footer"></div>
         </div>
         <div class="business_photo">
-          <img src="<%= business.image_url%>" alt="<%= business.name %>" >
+          <img class="img-rounded" src="<%= business.image_url%>" alt="<%= business.name%>"  ng-click="businessDisplay(<%=  @businesses.index(business) %>)" >
         </div>
       </div>     
     </div>

@@ -110,6 +110,18 @@ div.resultdisplay::-moz-scrollbars-vertical {
 
 }
 
+.resultdisplay ul li .list_outerbox .list_content .inner_col  .business_name a {
+  font-size: 20px;
+  color: #31B0D5;
+
+}
+.resultdisplay ul li .list_outerbox .list_content .inner_col  .business_name a:hover{
+  font-size: 20px;
+  color: #31B0D5;
+  cursor:pointer;
+
+}
+
 .resultdisplay ul li .list_outerbox .list_content .inner_col  .business_meta .rate{
   color: white;
   background: #e74c3c;
@@ -153,6 +165,12 @@ div.resultdisplay::-moz-scrollbars-vertical {
   margin: 0;
 }
 
+.resultdisplay ul li .list_outerbox .list_content .business_photo img:hover {
+  float: right;
+  margin: 0;
+  cursor:pointer;
+}
+
 .resultdisplay ul li .list_outerbox .list_content .business_photo img{
   float: right;
   margin: 0;
@@ -161,10 +179,42 @@ div.resultdisplay::-moz-scrollbars-vertical {
 
 }
 
+.resultdisplay ul li .list_outerbox .list_content .business_photo img:hover {
+  cursor:pointer;
+}
+
+
 
 
 /* Search Result Display Ends*/
 
+/* Display Individual Page */
+.venture_name {
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+.venture_category {
+  font-size: 18px;
+  color: #AEB4CB
+}
+
+.venture_image {
+  float: right;
+  width: 250px;
+  height:250px;
+  border-radius: 3%;
+}
+
+.venture_info {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+
+}
+
+/* Display Individual Page End */
 
 .filter {
   top: 520px;
